@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Ejercicio 1 Javascript</title>
+</head>
+<body>
+    <h1>¿COMO ESTA EL DIA HOY?</h1>
+    <form action="Estado del día"></form>
+    <label for="estadoDia">Seleccionar estado del día: </label>
+    <select id="estadoDia" name="estadoDia">
+        <option value="soleado">Soleado</option>
+        <option value="nublado">Nublado</option>
+        <option value="lloviendo">Lloviendo</option>
+        
+    </select>
+    <button type="button" onclick="mostrarEstadoDia()">Consultar</button>
+</form>
+
+<p id="resultado"></p>
+<script>
+    function mostrarEstadoDia() {
+        var seleccion = document.getElementById("estadoDia");
+        var estado = seleccion.options[seleccion.selectedIndex].value;
+        var mensaje = "El día de hoy está " + estado + ".";
+        document.getElementById("resultado").textContent = mensaje;
+    }
+    </script>
+
+
+    
+</body>
+</html>
+  
